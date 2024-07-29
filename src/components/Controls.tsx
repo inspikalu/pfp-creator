@@ -9,8 +9,8 @@ interface IInterfaceProps {
 
 const Controls: React.FC<IInterfaceProps> = ({ selectedCategory, setSelectedCategory, changeAccessory }) => {
   return (
-    <div className="controls mt-8 flex flex-col items-center justify-center">
-      <div className="categories flex space-x-4 mb-6">
+    <div className="controls mt-8 flex flex-col items-center justify-center max-w-full p-3">
+      <div className="categories flex flex-wrap gap-3 space-x-4 mb-6 w-full">
         {Object.keys(accessoriesOptions).map((category) => (
           <button
             key={category}
