@@ -37,12 +37,12 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="App w-full bg-blue-500 min-h-screen flex flex-col items-center justify-center text-white">
-      <h1 className="text-5xl font-bold mb-8 text-yellow-400 outline outline-4 outline-black">
+    <div className="App w-full bg-blue-500 min-h-screen flex flex-col items-center justify-center text-white p-4 sm:p-8">
+      <h1 className="text-3xl sm:text-5xl font-bold mb-4 sm:mb-8 text-yellow-400 outline outline-4 outline-black text-center">
         ZEUS PFP CREATOR
       </h1>
-      <div className="flex flex-col md:flex-row items-center justify-center space-x-0 md:space-x-8 space-y-8 md:space-y-0 p-8 bg-white rounded-lg shadow-2xl w-full">
-        <div className="avatar-container w-full max-w-[493px] aspect-square -skew-x-3 -skew-y-3 border-8 border-yellow-400 shadow-[0_0_10px_rgba(255,215,0,0.5)]">
+      <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8 bg-white rounded-lg shadow-2xl w-full max-w-7xl p-4 md:p-8">
+        <div className="avatar-container w-full max-w-xs md:max-w-md aspect-square -skew-x-3 -skew-y-3 border-8 border-yellow-400 shadow-[0_0_10px_rgba(255,215,0,0.5)] bg-gray-100">
           <Avatar accessories={accessories} />
         </div>
         <Controls selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} changeAccessory={changeAccessory} />
