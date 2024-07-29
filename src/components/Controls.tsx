@@ -24,7 +24,7 @@ const Controls: React.FC<IInterfaceProps> = ({ selectedCategory, setSelectedCate
         ))}
       </div>
       <div className='overflow-scroll w-full max-h-[16rem] p-5 border-4 border-black -skew-x-3'>
-      <div className="options grid grid-cols-4 gap-4 items-center justify-center">
+      <div className="options grid grid-cols-4 items-center justify-center gap-5">
         {accessoriesOptions[selectedCategory].map((option: AccessoryOption, index: number) => (
           <button
             key={index}
