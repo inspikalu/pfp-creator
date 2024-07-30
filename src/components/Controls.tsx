@@ -9,7 +9,9 @@ interface IInterfaceProps {
 
 const Controls: React.FC<IInterfaceProps> = ({ selectedCategory, setSelectedCategory, changeAccessory }) => {
   return (
-    <div className="controls mt-8 flex flex-col items-center justify-center max-w-full p-3">
+    <div className="controls mt-8 flex flex-col items-center justify-center max-w-full p-3" style={{
+      fontFamily: "Shantell sans cursive"
+    }}>
       <div className="categories flex flex-wrap gap-3 justify-center mb-6 w-full">
         {Object.keys(accessoriesOptions).map((category) => (
           <button
