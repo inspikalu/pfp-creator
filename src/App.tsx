@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Avatar from './components/Avatar';
 import html2canvas from 'html2canvas';
-import './App.css';
 import { AccessoryOptions } from './components/AccessoryOptions';
 import Controls from './components/Controls';
 
@@ -37,19 +36,26 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="App w-full bg-blue-500 min-h-screen flex flex-col items-center justify-center text-white p-4 sm:p-8">
-      <h1 className="text-3xl sm:text-5xl font-bold mb-4 sm:mb-8 text-yellow-400 outline outline-4 outline-black text-center">
-        ZEUS PFP CREATOR
-      </h1>
-      <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8 bg-white rounded-lg shadow-2xl w-full max-w-7xl p-4 md:p-8">
-        <div className="avatar-container w-full max-w-xs md:max-w-md aspect-square -skew-x-3 -skew-y-3 border-8 border-yellow-400 shadow-[0_0_10px_rgba(255,215,0,0.5)] bg-gray-100">
+    <div className="App min-h-screen flex flex-col items-center justify-center bg-cover bg-center text-gray-800 pb-4" style={{ backgroundImage: "url('/background.jpg')" }}>
+      <nav className="w-full bg-white bg-opacity-80 border-b-2 border-yellow-500 shadow-md py-4 px-6 flex justify-between items-center mb-8">
+        <div className="font-bold text-xl sm:text-3xl text-yellow-500">ZEUS PFP CREATOR</div>
+        <button className="text-yellow-500 hover:text-yellow-600 bg-white bg-opacity-80 px-4 py-2 border border-yellow-500 rounded-md transition">
+          Home
+        </button>
+      </nav>
+      <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8 bg-white bg-opacity-80 border border-yellow-500 shadow-lg w-full max-w-5xl p-6 rounded-lg">
+        <div className="avatar-container w-full max-w-xs md:max-w-md aspect-square border-4 border-yellow-500 shadow-md bg-gray-50 rounded-lg -skew-x-1 -skew-y-1">
           <Avatar accessories={accessories} />
         </div>
-        <Controls selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} changeAccessory={changeAccessory} />
+        <Controls
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+          changeAccessory={changeAccessory}
+        />
       </div>
       <button
         onClick={downloadAvatar}
-        className="mt-8 px-6 py-3 bg-yellow-400 text-black rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:bg-yellow-500 outline outline-2 outline-black"
+        className="mt-8 px-8 py-3 bg-yellow-500 text-white font-semibold shadow-md transition-transform transform hover:scale-105 rounded-lg"
       >
         Download Avatar
       </button>
