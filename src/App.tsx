@@ -40,7 +40,9 @@ const App: React.FC = () => {
       <nav className="w-full bg-white bg-opacity-80 border-b-2 border-yellow-500 shadow-md py-4 px-6 flex justify-between items-center mb-8">
         <div className="font-bold text-xl sm:text-3xl text-yellow-500">ZEUS PFP CREATOR</div>
         <button className="text-yellow-500 hover:text-yellow-600 bg-white bg-opacity-80 px-4 py-2 border border-yellow-500 rounded-md transition">
-          Home
+          <a href="https://boysclubzeus.com/" target='_blank' className='block w-full h-full'>
+          Project Page
+          </a>
         </button>
       </nav>
       <div className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8 bg-white bg-opacity-80 border border-yellow-500 shadow-lg w-full max-w-5xl p-6 rounded-lg">
