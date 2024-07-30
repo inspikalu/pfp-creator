@@ -41,7 +41,7 @@ const App: React.FC = () => {
         <div className="font-bold text-xl sm:text-3xl text-yellow-500">ZEUS PFP CREATOR</div>
         <button className="text-yellow-500 hover:text-yellow-600 bg-white bg-opacity-80 px-4 py-2 border border-yellow-500 rounded-md transition">
           <a href="https://boysclubzeus.com/" target='_blank' className='block w-full h-full'>
-          Project Page
+          Project Home
           </a>
         </button>
       </nav>
