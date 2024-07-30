@@ -9,15 +9,13 @@ interface IInterfaceProps {
 
 const Controls: React.FC<IInterfaceProps> = ({ selectedCategory, setSelectedCategory, changeAccessory }) => {
   return (
-    <div className="controls mt-8 flex flex-col items-center justify-center max-w-full p-3" style={{
-      fontFamily: "Shantell sans cursive"
-    }}>
+    <div className="controls mt-8 flex flex-col items-center justify-center w-full p-4" style={{ fontFamily: "Shantell sans cursive" }}>
       <div className="categories flex flex-wrap gap-3 justify-center mb-6 w-full">
         {Object.keys(accessoriesOptions).map((category) => (
           <button
             key={category}
             onClick={() => setSelectedCategory(category as keyof AccessoryOptions)}
-            className={`px-4 py-2 sm:px-5 sm:py-3 rounded-xl shadow-lg transition-transform transform hover:scale-105 ${
+            className={`px-3 py-2 sm:px-4 sm:py-2 rounded-xl shadow-lg transition-transform transform hover:scale-105 ${
               selectedCategory === category ? 'bg-yellow-400 text-black outline outline-2 outline-black' : 'bg-gray-800 text-gray-300 outline outline-2 outline-black'
             }`}
           >
@@ -25,8 +23,8 @@ const Controls: React.FC<IInterfaceProps> = ({ selectedCategory, setSelectedCate
           </button>
         ))}
       </div>
-      <div className="overflow-y-auto w-full max-h-64 sm:max-h-[16rem] p-3 sm:p-5 border-4 border-black -skew-x-3">
-        <div className="options grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
+      <div className="overflow-y-auto w-full max-h-64 sm:max-h-[16rem] md:max-h-[20rem] p-3 sm:p-4 border-4 border-black rounded-lg">
+        <div className="options grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 sm:gap-5 md:gap-6 lg:gap-7">
           {accessoriesOptions[selectedCategory].map((option: AccessoryOption, index: number) => (
             <button
               key={index}
@@ -35,10 +33,10 @@ const Controls: React.FC<IInterfaceProps> = ({ selectedCategory, setSelectedCate
                   changeAccessory(selectedCategory, option.src);
                 }
               }}
-              className="flex items-center justify-center text-black hover:bg-slate-500 p-3 sm:p-4 rounded-full w-20 sm:w-24 md:w-28 lg:w-32 shadow-lg transition-transform transform hover:scale-105 outline outline-2 outline-black"
+              className="flex items-center justify-center text-black hover:bg-slate-500 p-2 sm:p-3 md:p-4 rounded-full w-16 sm:w-20 lg:w-16 shadow-lg transition-transform transform hover:scale-105 outline outline-2 outline-black"
               style={{
                 backgroundColor: selectedCategory === 'background' && option.label ? option.label : 'white',
-                aspectRatio: '1 / 1', // Ensures the divs remain a perfect circle
+                aspectRatio: '1 / 1',
               }}
             >
               {selectedCategory !== 'background' ? (
