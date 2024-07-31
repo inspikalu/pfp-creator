@@ -9,7 +9,7 @@ const App: React.FC = () => {
     hat: null,
     accessory: null,
     hand: null,
-    head: "/PFP/head/head4.png",
+    head: "/PFP/head/head1.png",
     outfit: "/PFP/outfit/body.png",
     background: null,
   });
