@@ -15,9 +15,8 @@ const Controls: React.FC<IInterfaceProps> = ({ selectedCategory, setSelectedCate
           <button
             key={category}
             onClick={() => setSelectedCategory(category as keyof AccessoryOptions)}
-            className={`px-3 py-2 sm:px-4 sm:py-2 rounded-xl shadow-lg transition-transform transform hover:scale-105 ${
-              selectedCategory === category ? 'bg-yellow-400 text-black outline outline-2 outline-black' : 'bg-gray-800 text-gray-300 outline outline-2 outline-black'
-            }`}
+            className={`px-3 py-2 sm:px-4 sm:py-2 rounded-xl shadow-lg transition-transform transform hover:scale-105 ${selectedCategory === category ? 'bg-yellow-400 text-black outline outline-2 outline-black' : 'bg-gray-800 text-gray-300 outline outline-2 outline-black'
+              }`}
           >
             {category.charAt(0).toUpperCase() + category.slice(1)}
           </button>
@@ -40,7 +39,7 @@ const Controls: React.FC<IInterfaceProps> = ({ selectedCategory, setSelectedCate
               }}
             >
               {selectedCategory !== 'background' ? (
-                option.src && <img src={option.src} alt={option.label} className="rounded-full" />
+                option.src === null || option.label === "None" ? < div className="rounded-full"> None </div> : < img src={option.src} alt={option.label} className="rounded-full" />
               ) : (
                 <div className="text-center text-white aspect-square h-auto rounded-full flex items-center justify-center">
                   {option.label}

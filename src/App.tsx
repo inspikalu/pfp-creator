@@ -17,11 +17,31 @@ const App: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<keyof AccessoryOptions>('hat');
 
   const changeAccessory = (type: keyof AccessoryOptions, accessory: string | null) => {
-    setAccessories((prev) => ({
-      ...prev,
-      [type]: accessory,
-    }));
+    setAccessories((prev) => {
+      const defaultHead = "/PFP/head/head8.png";
+      const defaultOutfit = "/PFP/outfit/body.png";
+
+      let newValue: string | null = accessory;
+
+      // If the accessory is the same as the current one, toggle it off
+      if (prev[type] === accessory) {
+        newValue = null;
+      }
+
+      // Special handling for 'head' and 'outfit' to ensure defaults
+      if (type === 'head' && newValue === null) {
+        newValue = defaultHead;
+      } else if (type === 'outfit' && newValue === null) {
+        newValue = defaultOutfit;
+      }
+
+      return {
+        ...prev,
+        [type]: newValue,
+      };
+    });
   };
+
 
   const downloadAvatar = () => {
     const avatar = document.querySelector('.avatar') as HTMLElement | null;
@@ -34,6 +54,23 @@ const App: React.FC = () => {
       });
     }
   };
+
+  const randomize = () => {
+    const randomHat = Math.floor(Math.random() * 16) + 1;
+    const randomAccessory = Math.floor(Math.random() * 10) + 1;
+    const randomHand = Math.floor(Math.random() * 16) + 1;
+    const randomHead = Math.floor(Math.random() * 16) + 1;
+    const randomOutfit = Math.floor(Math.random() * 16) + 1;
+    const newValue = {
+      hat: `/PFP/hat/hat${randomHat}.png`,
+      accessory: `/PFP/accessory/accessory${randomAccessory}.png`,
+      hand: `/PFP/hand/hand${randomHand}.png`,
+      head: `/PFP/head/head${randomHead}.png`,
+      outfit: `/PFP/outfit/outfit${randomOutfit}.png`,
+      background: null,
+    }
+    setAccessories(newValue)
+  }
 
   return (
     <div className="App min-h-screen flex flex-col items-center justify-center text-gray-800 pb-4 relative bg-cover bg-center" style={{ backgroundImage: "url('/background.jpg')" }}>
@@ -50,6 +87,12 @@ const App: React.FC = () => {
         <div className="avatar-container w-full max-w-xs md:max-w-md aspect-square border-4 border-yellow-500 shadow-md bg-gray-50 rounded-lg -skew-x-1 -skew-y-1">
           <Avatar accessories={accessories} />
         </div>
+        <button
+          onClick={randomize}
+          className="mt-8 px-8 py-3 bg-yellow-500 text-white font-semibold shadow-md transition-transform transform hover:scale-105 rounded-lg relative z-10"
+        >
+          Randomize
+        </button>
         <Controls
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
