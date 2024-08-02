@@ -9,20 +9,21 @@ interface IInterfaceProps {
 
 const Controls: React.FC<IInterfaceProps> = ({ selectedCategory, setSelectedCategory, changeAccessory }) => {
   return (
-    <div className="controls mt-8 flex flex-col items-center justify-center w-full p-4" style={{ fontFamily: "Shantell sans cursive" }}>
-      <div className="categories flex flex-wrap gap-3 justify-center mb-6 w-full">
+    <div className="w-full" >
+      <div className="min-w-full w-full max-w-full flex gap-3 overflow-x-scroll p-3">
         {Object.keys(accessoriesOptions).map((category) => (
           <button
             key={category}
             onClick={() => setSelectedCategory(category as keyof AccessoryOptions)}
-            className={`px-3 py-2 sm:px-4 sm:py-2 rounded-xl shadow-lg transition-transform transform hover:scale-105 ${selectedCategory === category ? 'bg-yellow-400 text-black outline outline-2 outline-black' : 'bg-gray-800 text-gray-300 outline outline-2 outline-black'
+            className={` bg-blue-500 p-2 text-white rounded-md ${selectedCategory === category ? 'border-4 border-blue-600' : ''
               }`}
           >
             {category.charAt(0).toUpperCase() + category.slice(1)}
           </button>
         ))}
       </div>
-      <div className="overflow-y-auto w-full max-h-64 sm:max-h-[16rem] md:max-h-[20rem] p-3 sm:p-4 border-4 border-black rounded-lg">
+
+      <div className="overflow-y-auto w-full max-h-[9rem] md:max-h-[12rem] p-3 sm:p-4 border-4 border-black rounded-lg">
         <div className="options grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 sm:gap-5 md:gap-6 lg:gap-7">
           {accessoriesOptions[selectedCategory].map((option: AccessoryOption, index: number) => (
             <button
@@ -39,7 +40,7 @@ const Controls: React.FC<IInterfaceProps> = ({ selectedCategory, setSelectedCate
               }}
             >
               {selectedCategory !== 'background' ? (
-                option.src === null || option.label === "None" ? < div className="rounded-full"> None </div> : < img src={option.src} alt={option.label} className="rounded-full" />
+                option.src === null || option.label === "None" ? <div className="rounded-full">None</div> : <img src={option.src} alt={option.label} className="rounded-full" />
               ) : (
                 <div className="text-center text-white aspect-square h-auto rounded-full flex items-center justify-center">
                   {option.label}
@@ -49,6 +50,7 @@ const Controls: React.FC<IInterfaceProps> = ({ selectedCategory, setSelectedCate
           ))}
         </div>
       </div>
+
     </div>
   );
 };
