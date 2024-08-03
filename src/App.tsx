@@ -83,7 +83,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className={`w-full h-screen flex flex-col md:flex-row md:gap-5 md:p-5 items-center justify-between`}
+    <div className={`w-full h-screen flex flex-col md:flex-row md:gap-5 md:p-0 items-center justify-between`}
       style={{ backgroundColor: accessories.background || "#3b82f6" }}>
 
       {/* Header and Toggle Button */}
@@ -106,7 +106,7 @@ const App: React.FC = () => {
 
       {/* Controls and Action Buttons */}
       {creatingAvatar && (
-        <div className='flex flex-col bg-white rounded-t-xl md:rounded-b-xl p-2 h-[55%] md:h-[70%] overflow-scroll w-full'
+        <div className='flex flex-col bg-white rounded-t-xl md:rounded-none p-2 h-[55%] md:h-full overflow-scroll w-full'
           data-aos="fade-up"
           data-aos-duration="500"
           data-aos-delay="20"
@@ -119,16 +119,16 @@ const App: React.FC = () => {
             <Controls changeAccessory={changeAccessory} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
           </div>
 
-          <div className="w-full h-auto flex items-center justify-between mt-auto">
+          <div className="w-full h-auto flex items-center justify-between gap-3 mt-auto">
             <button
               onClick={downloadAvatar}
-              className="px-8 py-3 bg-blue-500 text-white font-semibold shadow-md transition-transform transform hover:scale-105 rounded-lg relative z-10 text-sm"
+              className="px-8 py-3 bg-blue-500 text-white font-semibold shadow-md transition-transform transform hover:scale-105 rounded-full relative z-10 text-sm"
             >
               Download Avatar
             </button>
             <button
               onClick={randomize}
-              className="px-8 py-3 bg-blue-500 text-white font-semibold shadow-md transition-transform transform hover:scale-105 rounded-lg relative z-10"
+              className="px-8 py-3 bg-blue-500 text-white font-semibold shadow-md transition-transform transform hover:scale-105 rounded-full relative z-10"
             >
               Randomize
             </button>
