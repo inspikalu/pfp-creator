@@ -18,8 +18,8 @@ const App: React.FC = () => {
     hat: null,
     accessory: null,
     hand: null,
-    head: "/PFP/head/head8.png",
-    outfit: "/PFP/outfit/body.png",
+    head: "/PFP-webp/head/head8.webp",
+    outfit: "/PFP-webp/outfit/body.webp",
     background: "#1398FD",
   });
   const [creatingAvatar, setCreatingAvatar] = useState<Boolean>(false);
@@ -31,8 +31,8 @@ const App: React.FC = () => {
 
   const changeAccessory = (type: keyof AccessoryOptions, accessory: string | null) => {
     setAccessories((prev) => {
-      const defaultHead = "/PFP/head/head8.png";
-      const defaultOutfit = "/PFP/outfit/body.png";
+      const defaultHead = "/PFP-webp/head/head8.webp";
+      const defaultOutfit = "/PFP-webp/outfit/body.webp";
 
       let newValue: string | null = accessory;
 
@@ -72,11 +72,11 @@ const App: React.FC = () => {
     const randomHead = Math.floor(Math.random() * 16) + 1;
     const randomOutfit = Math.floor(Math.random() * 16) + 1;
     const newValue = {
-      hat: `/PFP/hat/hat${randomHat}.png`,
-      accessory: `/PFP/accessory/accessory${randomAccessory}.png`,
-      hand: `/PFP/hand/hand${randomHand}.png`,
-      head: `/PFP/head/head${randomHead}.png`,
-      outfit: `/PFP/outfit/outfit${randomOutfit}.png`,
+      hat: `/PFP-webp/hat/hat${randomHat}.webp`,
+      accessory: `/PFP-webp/accessory/accessory${randomAccessory}.webp`,
+      hand: `/PFP-webp/hand/hand${randomHand}.webp`,
+      head: `/PFP-webp/head/head${randomHead}.webp`,
+      outfit: `/PFP-webp/outfit/outfit${randomOutfit}.webp`,
       background: "#1398FD",
     };
     setAccessories(newValue);
@@ -89,7 +89,7 @@ const App: React.FC = () => {
       {/* Header and Toggle Button */}
       {!creatingAvatar && (
         <div className="flex flex-col items-center justify-center mb-4">
-          <img src="/Zeus Logo.png" alt="Zeus Logo.png" />
+          <img src="/Zeus Logo.png" alt="Zeus Logo.webp" />
           <h2 className='text-center text-4xl font-bold text-white mb-auto'>
             ZEUS PFP <br /> CREATOR
           </h2>
