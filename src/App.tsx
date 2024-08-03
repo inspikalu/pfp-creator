@@ -83,7 +83,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className={`w-full h-screen flex flex-col md:flex-row md:gap-5 md:p-0 items-center justify-between`}
+    <div className={`w-full h-screen flex flex-col md:flex-row ${!creatingAvatar &&  "md:justify-center"} md:gap-0 md:p-0 items-center justify-between`}
       style={{ backgroundColor: accessories.background || "#3b82f6" }}>
 
       {/* Header and Toggle Button */}
@@ -100,7 +100,7 @@ const App: React.FC = () => {
       )}
 
       {/* Avatar Container */}
-      <div className={`w-full max-w-xs md:max-w-md aspect-square  rounded-lg relative md:border-4 md:border-blue-800`}>
+      <div className={`w-full max-w-xs md:max-w-md aspect-square  rounded-lg relative `}>
         <Avatar accessories={accessories} />
       </div>
 
