@@ -51,6 +51,9 @@ export const accessoriesOptions: AccessoryOptions = {
         { label: "Hand 14", src: "/PFP-webp/hand/hand14.webp" },
         { label: "Hand 15", src: "/PFP-webp/hand/hand15.webp" },
         { label: "Hand 16", src: "/PFP-webp/hand/hand16.webp" },
+        { label: "Hand 17", src: "/PFP-webp/hand/hand17.webp" },
+        { label: "Hand 18", src: "/PFP-webp/hand/hand18.webp" },
+        { label: "Hand 19", src: "/PFP-webp/hand/hand19.webp" },
 
     ],
     hat: [
@@ -71,6 +74,11 @@ export const accessoriesOptions: AccessoryOptions = {
         { label: "Hat 14", src: "/PFP-webp/hat/hat14.webp" },
         { label: "Hat 15", src: "/PFP-webp/hat/hat15.webp" },
         { label: "Hat 16", src: "/PFP-webp/hat/hat16.webp" },
+        { label: "Hat 17", src: "/PFP-webp/hat/hat17.webp" },
+        { label: "Hat 18", src: "/PFP-webp/hat/hat18.webp" },
+        { label: "Hat 19", src: "/PFP-webp/hat/hat19.webp" },
+        { label: "Hat 20", src: "/PFP-webp/hat/hat20.webp" },
+        { label: "Hat 21", src: "/PFP-webp/hat/hat21.webp" },
     ],
     outfit: [
         { label: "None", src: '/PFP-webp/outfit/body.webp' },
@@ -90,6 +98,11 @@ export const accessoriesOptions: AccessoryOptions = {
         { label: "Outfit 14", src: "/PFP-webp/outfit/outfit14.webp" },
         { label: "Outfit 15", src: "/PFP-webp/outfit/outfit15.webp" },
         { label: "Outfit 16", src: "/PFP-webp/outfit/outfit16.webp" },
+        { label: "Outfit 17", src: "/PFP-webp/outfit/outfit17.webp" },
+        { label: "Outfit 18", src: "/PFP-webp/outfit/outfit18.webp" },
+        { label: "Outfit 19", src: "/PFP-webp/outfit/outfit19.webp" },
+        { label: "Outfit 20", src: "/PFP-webp/outfit/outfit20.webp" },
+        { label: "Outfit 21", src: "/PFP-webp/outfit/outfit21.webp" },
     ],
     accessory: [
         { label: "None", src: null },
@@ -103,6 +116,8 @@ export const accessoriesOptions: AccessoryOptions = {
         { label: "Accessory 8", src: "/PFP-webp/accessory/accessory8.webp" },
         { label: "Accessory 9", src: "/PFP-webp/accessory/accessory9.webp" },
         { label: "Accessory 10", src: "/PFP-webp/accessory/accessory10.webp" },
+        { label: "Accessory 11", src: "/PFP-webp/accessory/accessory11.webp" },
+        { label: "Accessory 12", src: "/PFP-webp/accessory/accessory12.webp" },
         // Add other Accessory here...
     ],
     background: [
@@ -122,5 +137,12 @@ export const accessoriesOptions: AccessoryOptions = {
         { label: "#241512", src: "#241512" },
         { label: "#2400FF", src: "#2400FF" },
         { label: "#141414", src: "#141414" },
+        { label: "#66503B", src: "#66503B" },
+        // new recruit
+        { label: "#12FECE", src: "#12FECE" },
+        { label: "#710506", src: "#710506" },
+        { label: "#4D279B", src: "#4D279B" },
+        { label: "#FEC697", src: "#FEC697" },
+
     ],
 };
