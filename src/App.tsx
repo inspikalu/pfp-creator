@@ -68,7 +68,7 @@ const App: React.FC = () => {
   const randomize = () => {
     const randomHat = Math.floor(Math.random() * 21) + 1;
     const randomAccessory = Math.floor(Math.random() * 12) + 1;
-    const randomHand = Math.floor(Math.random() * 19) + 1;
+    const randomHand = Math.floor(Math.random() * 20) + 1;
     const randomHead = Math.floor(Math.random() * 16) + 1;
     const randomOutfit = Math.floor(Math.random() * 21) + 1;
     const newValue = {
