@@ -55,6 +55,7 @@ export const accessoriesOptions: AccessoryOptions = {
         { label: "Hand 18", src: "/PFP-webp/hand/hand18.webp" },
         { label: "Hand 19", src: "/PFP-webp/hand/hand19.webp" },
 
+{ label: "Hand 20", src: "/PFP-webp/hand/hand20.webp" },
     ],
     hat: [
         { label: "None", src: null },
