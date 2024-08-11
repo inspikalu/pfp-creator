@@ -118,8 +118,7 @@ export const accessoriesOptions: AccessoryOptions = {
         { label: "Accessory 9", src: "/PFP-webp/accessory/accessory9.webp" },
         { label: "Accessory 10", src: "/PFP-webp/accessory/accessory10.webp" },
         { label: "Accessory 11", src: "/PFP-webp/accessory/accessory11.webp" },
-        { label: "Accessory 12", src: "/PFP-webp/accessory/accessory12.webp" },
-        // Add other Accessory here...
+        
     ],
     background: [
         { label: "#1398FD", src: "#1398FD" },
